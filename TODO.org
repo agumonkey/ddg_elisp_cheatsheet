@@ -4,7 +4,54 @@
 
 * TODO list sections
 
-* TODO fill sections
+** string
+   syntax string-join
+
+** booleans
+   t nil
+
+** numbers
+   syntax integer float < > >= <= random sin cos log sqrt expt
+
+** lists
+   syntax quoted-syntax list car cdr
+
+** vectors
+   syntax aref aset
+
+** hashmap
+   make-hash-table gethash puthash
+
+** buffers
+   point-min point-max goto-char backward forward insert substring-no-properties with-buffer save-excursion
+
+** functions
+   defun lambda rest
+
+** macros
+   defmacro
+
+** regex
+   looking-at re-search-forward match-string match-data match-beginning match-end
+
+** region
+   region-active-p region-beginning region-end region-string
+
+** errors & exceptions
+   error catch throw
+
+** io
+   read print pp with-output-to-string find-file
+
+** libraries
+
+*** dash functional idioms (map, filter, reduce and a lot more)
+
+*** f file library
+
+*** s string library
+
+*** ht hashtable library
 
 * TODO ask #emacs et al about improvements
 
