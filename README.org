@@ -1,1 +1,5 @@
+* DuckDuckGo Elisp Cheat Sheet
 
+  an instant answer for duckduckgo.com to display some elisp
+  see: http://duckduckhack.com/
+  and: http://docs.duckduckhack.com/walkthroughs/programming-syntax.html
