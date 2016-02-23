@@ -1,12 +1,16 @@
 {
     "id": "elisp_cheat_sheet",
     "name": "Elisp",
-    "description": "Programming Language",
+    "description": "Elisp syntax and information",
+    "aliases": [
+    	"emacs lisp",
+    	"elisp"
+    	],
     "metadata": {
-        "sourceName": "ElispCheatSheet",
-        "sourceUrl": "http://gnu.org/software/emacs"
+        "sourceName": "GNU Emacs",
+        "sourceUrl": "https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html"
     },
-    "template_type": "keyboard",
+    "template_type": "terminal",
     "section_order": [
         "Types",
         "Functions",
