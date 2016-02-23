@@ -2,9 +2,7 @@
 #+AUTHOR:    gum
 #+EMAIL:     agumonkey@gmail.com
 
-* DuckDuckGo Elisp Cheat Sheet
+an instant answer for duckduckgo.com to display some elisp, see:
 
-  an instant answer for duckduckgo.com to display some elisp, see:
-  
   - http://duckduckhack.com/
   - http://docs.duckduckhack.com/walkthroughs/programming-syntax.html
