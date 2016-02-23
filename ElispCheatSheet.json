@@ -1,0 +1,35 @@
+{
+    "id": "elisp_cheat_sheet",
+    "name": "Elisp",
+    "description": "Programming Language",
+    "metadata": {
+        "sourceName": "ElispCheatSheet",
+        "sourceUrl": "http://gnu.org/software/emacs"
+    },
+    "template_type": "keyboard",
+    "section_order": [
+        "Types",
+        "Functions",
+	"..."
+    ],
+    "sections": {
+        "Types": [{
+            "val": "strings",
+            "key": "\"a string\""
+        }, {
+            "val": "keywords",
+            "key": ":foo"
+        }],
+        "Functions": [{
+            "val": "mapcar",
+            "key": "(mapcar <function> <sequence>)"
+        }, {
+	    "val": "defun",
+	    "key": "(defun <name> (<args>) <body>)"
+	}],
+        "...": [{
+            "val": "moar",
+            "key": "..."
+        }]
+    }
+}
