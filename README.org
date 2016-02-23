@@ -1,3 +1,7 @@
+#+TITLE:     DuckDuckGo Elisp CheatSheet
+#+AUTHOR:    gum
+#+EMAIL:     agumonkey@gmail.com
+
 * DuckDuckGo Elisp Cheat Sheet
 
   an instant answer for duckduckgo.com to display some elisp, see:
