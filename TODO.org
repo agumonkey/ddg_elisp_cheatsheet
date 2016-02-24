@@ -5,43 +5,131 @@
 * TODO list sections
 
 ** string
-   syntax string-join
+   | key         | val                                                            |
+   |-------------+----------------------------------------------------------------|
+   | syntax      | "a string"                                                     |
+   | string-join | (string-join '("Hello" ", " "world") "!") ;-> "Hello!, !world" |
 
 ** booleans
-   t nil
+   | key   | val |
+   |-------+-----|
+   | true  | t   |
+   | false | nil |
 
 ** numbers
-   syntax integer float < > >= <= random sin cos log sqrt expt
+   | key     | val                                    |
+   |---------+----------------------------------------|
+   | integer | 0, -1                                  |
+   | float   | 1.0, 1.1e-12                           |
+   | <       | (< 2 1) ;-> nil                        |
+   | >       | (> 2 1) ;-> t                          |
+   | >=      | ...                                    |
+   | <=      | ...                                    |
+   | random  | (random 10) ;-> 8                      |
+   | sin     | (sin 3.1415) ;-> 9.265358966049026e-05 |
+   | cos     | (cos 3.1415) ;-> -0.9999999957076562   |
+   | log     | ...                                    |
+   | sqrt    | ...                                    |
+   | expt    | ...                                    |
 
 ** lists
-   syntax quoted-syntax list car cdr
+   | key           | val                      |
+   |---------------+--------------------------|
+   | list          | (list 1 2 3 4)           |
+   | quoted-syntax | '(1 2 3 4)               |
+   | car           | (car '(1 2 3)) ;-> 1     |
+   | cdr           | (cdr '(1 2 3)) ;-> (2 3) |
+
+** conditionals
+   | key    | val                   |
+   |--------+-----------------------|
+   | if     | (if (cond) then else) |
+   | when   | (when (cond) true)    |
+   | unless | (unless (cond) false) |
+
+** repetition
+   | key       | val                                             |
+   |-----------+-------------------------------------------------|
+   | mapcar    | (mapcar #'inc '(1 2 3)) ;-> (2 3 4)             |
+   | mapconcat | (mapconcat #'upcase '("a" "b") ", ") ;-> "A, B" |
+   | loop      | TODO                                            |
+   | while     | (while (cond) body)                             |
 
 ** vectors
-   syntax aref aset
+   | key    | val                      |
+   |--------+--------------------------|
+   | syntax | [0 1 2 3]                |
+   | aref   | (aref [0 1 2] 0) ;-> 0   |
+   | aset   | (aset [0 1 2] 0 9) ;-> 9 |
 
 ** hashmap
-   make-hash-table gethash puthash
+   | key             | val                                                                  |
+   |-----------------+----------------------------------------------------------------------|
+   | make-hash-table | (make-hash-table)                                                    |
+   | gethash         | (let ((ht (make-hash-table))) (puthash 1 2 ht) (gethash 1 ht)) ;-> 2 |
+   | puthash         | ...                                                                  |
 
 ** buffers
-   point-min point-max goto-char backward forward insert substring-no-properties with-buffer save-excursion
+   | key                     | val |
+   |-------------------------+-----|
+   | point-min               |     |
+   | point-max               |     |
+   | goto-char               |     |
+   | backward                |     |
+   | forward                 |     |
+   | insert                  |     |
+   | substring-no-properties |     |
+   | with-buffer             |     |
+   | save-excursion          |     |
 
-** functions
-   defun lambda rest
+** functions, scopes and other
+   | key                        | val                                              |
+   |----------------------------+--------------------------------------------------|
+   | defun                      | (defun <name> (<args>) <body>)                   |
+   | lambda                     | (lambda (<args>) <body>)                         |
+   | &rest                      | (defun <name> (<args> &rest <rest-args>) <body>) |
+   | let (variables)            | (let ((x 1) (y 10)) (+ x y)) ;-> 11              |
+   | progn (statement sequence) | (progn (message "wat") (* 6 7)) ;-> 42           |
 
 ** macros
-   defmacro
+   | key      | val                               |
+   |----------+-----------------------------------|
+   | defmacro | (defmacro <name> (<args>) <body>) |
 
 ** regex
-   looking-at re-search-forward match-string match-data match-beginning match-end
+   | key                | val                                           |
+   |--------------------+-----------------------------------------------|
+   | looking-at         |                                               |
+   | re-search-forward  | (re-search-forward "def(un or var or macro)") |
+   | re-search-backward | ...                                           |
+   | string-match       | (string-match "[aoeiu]+" "foobaa")            |
+   | match-data         |                                               |
+   | match-beginning    |                                               |
+   | match-end          |                                               |
 
 ** region
-   region-active-p region-beginning region-end region-string
+   | key              | val |
+   |------------------+-----|
+   | region-active-p  |     |
+   | region-beginning |     |
+   | region-end       | ... |
+   | region-string    |     |
 
 ** errors & exceptions
-   error catch throw
+   | key   | val                                   |
+   |-------+---------------------------------------|
+   | error | (error "message")                     |
+   | catch | (catch <tag> <body-maybe-with-throw>) |
+   | throw | (throw <tag> <value>)                 |
 
 ** io
-   read print pp with-output-to-string find-file
+   | key                   | val                              |
+   |-----------------------+----------------------------------|
+   | read                  |                                  |
+   | print                 |                                  |
+   | pp                    |                                  |
+   | with-output-to-string |                                  |
+   | find-file             | (find-file "~/.emacs.d/init.el") |
 
 ** libraries
 
