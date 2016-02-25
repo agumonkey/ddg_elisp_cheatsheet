@@ -133,15 +133,29 @@
    | with-output-to-string |                                  |
    | find-file             | (find-file "~/.emacs.d/init.el") |
 
-** libraries
+** TODO libraries
 
 *** dash functional idioms (map, filter, reduce and a lot more)
+    -each -map -reduce-from -reduce
+    -filter -keep -mapcat -flatten
+    -any? -all? -take -drop-while
+    -rotate -partition -group-by -interpose
+    -interleave -zip-with -zip -cycle ... (100+ total)
 
 *** f file library
+    f-expand f-filename f-dirname f-common-parent f-mkdir
+    f-delete f-move f-copy f-touch f-exists? f-directory?
+    f-parent-of? f-child-of? f-size f-glob ... (59 total)
 
 *** s string library
+    s-trim s-collapse-whitespace s-split s-join s-concat
+    s-prepend s-append s-repeat s-center s-pad-left
+    s-pad-right s-downcase s-upcase s-capitalize s-titleize
+    s-wrap ... (67 total)
 
 *** ht hashtable library
+    ht<-alist ht->alist ht-merge ht-map
+    ht-keys ht-values ht-contains? ... (24 total)
 
 * TODO ask #emacs et al about improvements
 
