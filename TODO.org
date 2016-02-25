@@ -4,19 +4,19 @@
 
 * TODO list sections
 
-** string
+** TODO string
    | key         | val                                                            |
    |-------------+----------------------------------------------------------------|
    | syntax      | "a string"                                                     |
    | string-join | (string-join '("Hello" ", " "world") "!") ;-> "Hello!, !world" |
 
-** booleans
+** DONE booleans
    | key   | val |
    |-------+-----|
    | true  | t   |
    | false | nil |
 
-** numbers
+** DONE numbers
    | key     | val                                    |
    |---------+----------------------------------------|
    | integer | 0, -1                                  |
@@ -32,22 +32,23 @@
    | sqrt    | ...                                    |
    | expt    | ...                                    |
 
-** lists
+** DONE lists
    | key           | val                      |
    |---------------+--------------------------|
    | list          | (list 1 2 3 4)           |
    | quoted-syntax | '(1 2 3 4)               |
    | car           | (car '(1 2 3)) ;-> 1     |
    | cdr           | (cdr '(1 2 3)) ;-> (2 3) |
+   | nth           | (nth 0 '(1 2 3)) ;-> 1   |
 
-** conditionals
+** DONE conditionals
    | key    | val                   |
    |--------+-----------------------|
    | if     | (if (cond) then else) |
    | when   | (when (cond) true)    |
    | unless | (unless (cond) false) |
 
-** repetition
+** TODO repetition
    | key       | val                                             |
    |-----------+-------------------------------------------------|
    | mapcar    | (mapcar #'inc '(1 2 3)) ;-> (2 3 4)             |
@@ -55,21 +56,21 @@
    | loop      | TODO                                            |
    | while     | (while (cond) body)                             |
 
-** vectors
+** DONE vectors
    | key    | val                      |
    |--------+--------------------------|
    | syntax | [0 1 2 3]                |
    | aref   | (aref [0 1 2] 0) ;-> 0   |
    | aset   | (aset [0 1 2] 0 9) ;-> 9 |
 
-** hashmap
+** DONE hashmap
    | key             | val                                                                  |
    |-----------------+----------------------------------------------------------------------|
    | make-hash-table | (make-hash-table)                                                    |
    | gethash         | (let ((ht (make-hash-table))) (puthash 1 2 ht) (gethash 1 ht)) ;-> 2 |
    | puthash         | ...                                                                  |
 
-** buffers
+** TODO buffers
    | key                     | val |
    |-------------------------+-----|
    | point-min               |     |
@@ -82,7 +83,7 @@
    | with-buffer             |     |
    | save-excursion          |     |
 
-** functions, scopes and other
+** TODO functions, scopes and other
    | key                        | val                                              |
    |----------------------------+--------------------------------------------------|
    | defun                      | (defun <name> (<args>) <body>)                   |
@@ -91,15 +92,16 @@
    | let (variables)            | (let ((x 1) (y 10)) (+ x y)) ;-> 11              |
    | progn (statement sequence) | (progn (message "wat") (* 6 7)) ;-> 42           |
 
-** macros
-   | key      | val                               |
-   |----------+-----------------------------------|
-   | defmacro | (defmacro <name> (<args>) <body>) |
+** TODO macros
+   | key        | val                                     |
+   |------------+-----------------------------------------|
+   | defmacro   | (defmacro <name> (<args>) <body>)       |
+   | quasiquote | `(+ 1 2 ,(length ", means eval)" 4) |
 
-** regex
+** TODO regex
    | key                | val                                           |
    |--------------------+-----------------------------------------------|
-   | looking-at         |                                               |
+   | looking-at         | (when (looking-at "# +") ...)                 |
    | re-search-forward  | (re-search-forward "def(un or var or macro)") |
    | re-search-backward | ...                                           |
    | string-match       | (string-match "[aoeiu]+" "foobaa")            |
@@ -107,27 +109,27 @@
    | match-beginning    |                                               |
    | match-end          |                                               |
 
-** region
-   | key              | val |
-   |------------------+-----|
-   | region-active-p  |     |
-   | region-beginning |     |
-   | region-end       | ... |
-   | region-string    |     |
+** TODO region
+   | key              | val                                      |
+   |------------------+------------------------------------------|
+   | region-active-p  | ...                                      |
+   | region-beginning | ...                                      |
+   | region-end       | ...                                      |
+   | region-string    | (when (region-active-p) (region-string)) |
 
-** errors & exceptions
+** DONE errors & exceptions
    | key   | val                                   |
    |-------+---------------------------------------|
    | error | (error "message")                     |
    | catch | (catch <tag> <body-maybe-with-throw>) |
    | throw | (throw <tag> <value>)                 |
 
-** io
+** TODO io
    | key                   | val                              |
    |-----------------------+----------------------------------|
-   | read                  |                                  |
-   | print                 |                                  |
-   | pp                    |                                  |
+   | read                  | (read)                           |
+   | print                 | (print "wat")                    |
+   | pp                    | (pp '(1 2 3 4))                  |
    | with-output-to-string |                                  |
    | find-file             | (find-file "~/.emacs.d/init.el") |
 
